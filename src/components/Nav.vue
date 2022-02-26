@@ -1,0 +1,75 @@
+<script setup>
+defineProps({
+  title: {
+    type: String,
+    required: true
+  }
+});
+</script>
+<template>
+  <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-success">
+      <div class="container-fluid justify-content-center">
+        <div>
+          <button
+            class="navbar-toggler me-2"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+
+        <img src="../assets/images/favicon.svg" width="35" height="35" class="me-2" />
+        <div>
+          <a class="navbar-brand" href="#"
+            >{{ title }}</a
+          >
+        </div>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Dropdown
+              </a>
+              <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#">Acción</a></li>
+                <li><a class="dropdown-item" href="#">Otra acción</a></li>
+                <li>
+                  <hr class="dropdown-divider" />
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#"
+                    >Otra opción en otra categoría</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled">Deshabilitado</a>
+            </li>
+          </ul>
+          <form class="d-flex">
+            <button class="btn btn-light me-1" type="submit">Botón 1</button>
+            <button class="btn btn-light" type="submit">Botón 2</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+</template>
