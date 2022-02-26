@@ -1,5 +1,16 @@
 # Actividad 6.- Gestión de accesos de usuario
 
+## Desplegar
+
+Click en uno de los siguientes botones para desplegarlo en la plataforma deseada
+
+| Platforma |                                                                                                  Botón                                                                                                   |
+| :------: | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
+|  Vercel  |        [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FTelematica-IS-UDC-2019%2FE4-6-DSS-gestion-de-accesos-de-usuario)         |
+| Netlify  | [![Deploy with Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/Telematica-IS-UDC-2019/E4-6-DSS-gestion-de-accesos-de-usuario) |
+
+## Descripción
+
 EQUIPOS
 Un control de acceso a sistemas informáticos está basado en tres conceptos fundamentales: identificación, autenticación y autorización.
 
@@ -14,14 +25,13 @@ b).- En el caso del control de acceso en red, este funciona de manera integrada 
 Para ello, debe contarse con un software de control, especialmente desarrollado para llevar un registro efectivo y fidedigno de todas las incidencias que pueden suscitarse, incluyendo fecha y horario de las mismas, además de la identificación de cada usuario.
 
 Desarrollar en cualquier lenguaje o entorno apropiado un control de acceso en red, aplicando la arquitectura asignada por equipo:
+
 - Tradicional aplicando algún esquema bueno y seguro de encriptación, Ej. md5, base64
 - Captchas
 - Firebase
 - Federación
 
-
 EQUIPO 1 (Captchas)
-
 
 EQUIPO 2 (Tradicional)
 
