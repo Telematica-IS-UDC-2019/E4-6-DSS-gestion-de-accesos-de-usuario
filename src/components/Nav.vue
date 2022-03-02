@@ -1,11 +1,3 @@
-<script setup>
-defineProps({
-  title: {
-    type: String,
-    required: true
-  }
-});
-</script>
 <template>
   <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-success">
       <div class="container-fluid justify-content-center">
@@ -73,3 +65,14 @@ defineProps({
       </div>
     </nav>
 </template>
+<script>
+export default {
+  name: 'Nav',
+  props: {
+    title: {
+      type: String,
+      required: true
+    }
+  }
+}
+</script>
