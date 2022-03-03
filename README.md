@@ -1,6 +1,7 @@
 # Actividad 6.- Gestión de accesos de usuario
 
 EQUIPOS
+
 Un control de acceso a sistemas informáticos está basado en tres conceptos fundamentales: identificación, autenticación y autorización.
 
 Existen dos tipos de control de acceso de seguridad informática, que son (a)el control de acceso autónomo y (b)el control de acceso en red.
@@ -19,9 +20,7 @@ Desarrollar en cualquier lenguaje o entorno apropiado un control de acceso en re
 - Firebase
 - Federación
 
-
 EQUIPO 1 (Captchas)
-
 
 EQUIPO 2 (Tradicional)
 

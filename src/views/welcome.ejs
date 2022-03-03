@@ -1,0 +1,62 @@
+<html lang="en">
+
+<head>
+  <title>Actividad 6.- Gestión de accesos de usuario</title>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width" />
+  <link rel="icon" href="/assets/images/favicon.svg">
+  <link rel="stylesheet" href="/bootstrap/dist/css/bootstrap.css"/>
+  <script src="/bootstrap/dist/js/bootstrap.js"></script>
+  <script src="/jquery/dist/jquery.js"></script>
+</head>
+
+<body>
+  <!--navbar principal-->
+  <nav id="nav">
+  </nav>
+  <!-- carrusel -->
+  <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+        aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+        aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+        aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="/assets/images/favicon.svg" class="d-block w-100" style="height: 85%;">
+        <div class="carousel-caption">
+          <button id="btnLogin" class="btn btn-success">Iniciar sesión</button>
+        </div>
+      </div>
+    </div>
+
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+      data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+      data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+</body>
+
+<script>
+  $(function () {
+      $("#nav").load("/assets/components/nav.html");
+  });
+  document.getElementById("btnLogin").addEventListener("click", () => {
+      window.location.href = "/login";
+  });
+</script>
+
+<script scr="/assets/js/welcome.js"></script>
+
+</html>
