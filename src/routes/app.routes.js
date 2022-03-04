@@ -2,13 +2,11 @@
 import { Router } from 'express';
 import passport from 'passport';
 import fs from 'fs';
-import { fileURLToPath } from 'url'
-import { dirname } from 'path'
-import samlStrategy_ from '../strategy.js';
-
+import tools from '../functions/tools.js';
+import { samlStrategy } from '../app.js';
 // Add the paths of the current file
-const __filename = fileURLToPath(import.meta.url)
-const __dirname = dirname(__filename)
+const __filename = tools.path.__filename({ url: import.meta.url });
+const __dirname = tools.path.__dirname({ url: import.meta.url });
 // Create express router
 const router = Router();
 // Get the main route
@@ -34,7 +32,7 @@ router.get('/information', (req, res, next) => {
 router.get('/logout', (req, res) => {
   if (!req.session.user) res.redirect('/');
   req.session.user = null;
-  samlStrategy_.logout(req, (err, request) => {
+  samlStrategy.logout(req, (err, request) => {
     return res.redirect(request)
   });
 });
@@ -48,7 +46,7 @@ router.get('/login/fail', (req, res) => res.status(401).send('Login failed'));
 // Get the metadata route
 router.get('/Metadata', (req, res) => {
   res.type('application/xml');
-  res.status(200).send(samlStrategy_.generateServiceProviderMetadata(fs.readFileSync(__dirname + '/../cert/cert.pem', 'utf8')));
+  res.status(200).send(samlStrategy.generateServiceProviderMetadata(fs.readFileSync(__dirname + '/../cert/cert.pem', 'utf8')));
 });
 //Get general error handler
 router.use((err, req, res, next) => {

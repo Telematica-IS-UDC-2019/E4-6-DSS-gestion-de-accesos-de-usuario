@@ -2,7 +2,7 @@
 import 'dotenv/config';
 import isPortReachable from 'is-port-reachable';
 // Create portCheck function
-const portCheck = await (async () => {
+const portCheck = (async () => {
     if (!(await isPortReachable(4006, { host: 'localhost' }))) {
         return 4006;
     } else if (!(await isPortReachable(process.env.PORT, { host: 'localhost' }))) {
