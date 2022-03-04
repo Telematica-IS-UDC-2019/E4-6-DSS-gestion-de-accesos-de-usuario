@@ -11,7 +11,11 @@ const __dirname = tools.path.__dirname({ url: import.meta.url });
 const router = Router();
 // Get the main route
 router.get('/', (req, res) => {
-  res.render('welcome.ejs', { user: { hostname: process.env.USERDOMAIN, username: process.env.USERNAME } });
+  if (!req.user) {
+    res.render('welcome.ejs', { user: { hostname: process.env.USERDOMAIN, username: process.env.USERNAME } });
+  } else {
+    res.redirect('/information');
+  }
 });
 // Get the login route
 router.get('/login', passport.authenticate('saml', { failureRedirect: '/login/fail', failureFlash: true }), (req, res) => res.redirect('/'));
@@ -20,20 +24,19 @@ router.post('/login/callback', passport.authenticate('saml', {
   failureRedirect: '/login/fail',
   failureFlash: true
 }), (req, res) => {
-  req.session.user = req.user
-  res.redirect('/information')
+  if (req.user) {
+    req.session.user = req.user;
+    res.redirect('/information');
+  }
 });
-// Get the information route
-router.get('/information', (req, res, next) => {
-  if (!req.session.user) res.redirect('/');
-  res.render('information.ejs', { user: req.session.user });
-});
+// Get the login fail route
+router.get('/login/fail', (req, res) => res.status(401).send('Login failed'));
 // Get the logout route
 router.get('/logout', (req, res) => {
   if (!req.session.user) res.redirect('/');
   req.session.user = null;
   samlStrategy.logout(req, (err, request) => {
-    return res.redirect(request)
+    return res.redirect(request);
   });
 });
 // Get the logout callback route
@@ -41,8 +44,14 @@ router.post('/logout/callback', (req, res) => {
   req.logout();
   res.redirect('/');
 });
-// Get the login fail route
-router.get('/login/fail', (req, res) => res.status(401).send('Login failed'));
+// Get the information route
+router.get('/information', (req, res, next) => {
+  if (req.session.user) {
+    res.render('information.ejs', { user: req.session.user });
+  } else {
+    res.redirect('/');
+  }
+});
 // Get the metadata route
 router.get('/Metadata', (req, res) => {
   res.type('application/xml');
