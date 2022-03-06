@@ -15,6 +15,7 @@ b).- En el caso del control de acceso en red, este funciona de manera integrada 
 Para ello, debe contarse con un software de control, especialmente desarrollado para llevar un registro efectivo y fidedigno de todas las incidencias que pueden suscitarse, incluyendo fecha y horario de las mismas, además de la identificación de cada usuario.
 
 Desarrollar en cualquier lenguaje o entorno apropiado un control de acceso en red, aplicando la arquitectura asignada por equipo:
+
 - Tradicional aplicando algún esquema bueno y seguro de encriptación, Ej. md5, base64
 - Captchas
 - Firebase
@@ -29,22 +30,26 @@ EQUIPO 3 (Firebase)
 EQUIPO 4 (Federación)
 
 ## Requisitos
+
 - Node.js (>= 16.14.0 LTS)
 - Conexión a internet
 - Cuenta de la Universidad de Colima
 - Puerto local 4006 libre
 
 ## Instalación
+
 ```
 npm install
 ```
 
 ## Iniciar el servidor
+
 ```
 npm start
 npm run dev | (Requiere nodemon)
 ```
 
 ## Previsualización
+
 <p align="center"><img src="./content/pages/page-welcome.png" width="700" style="align-center"></p>
 <p align="center"><img src="./content/pages/page-information.png" width="700" style="align-center"></p>

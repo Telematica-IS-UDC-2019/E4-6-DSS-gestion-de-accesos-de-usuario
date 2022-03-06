@@ -32,7 +32,7 @@ app.use(passport.session());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cors());
-if (process.env.NODE_ENV?.toLocaleLowerCase() !=  'production') app.use(morgan("dev"));
+if (process.env.NODE_ENV?.toLocaleLowerCase() != 'production') app.use(morgan("dev"));
 // Set the view and routes
 app.use('/assets', express.static(__dirname + '/assets'));
 app.use('/node_modules', express.static(__dirname + '/../node_modules'));

@@ -1,72 +1,75 @@
 <html lang="en">
 
 <head>
-  <!-- Set page description and assets -->
-  <title>Actividad 6.- Gestión de accesos de usuario</title>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width" />
-  <link rel="icon" href="/assets/images/favicon.svg" sizes="any" type="image/svg+xml" />
-  <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.css" />
-  <link rel="stylesheet" href="/assets/css/main.css" />
-  <script src="/assets/js/functions/navLoader.js" type="module"></script>
-  <!-- <script src="/bootstrap/dist/js/bootstrap.js"></script> -->
-  <!-- <script src="/jquery/dist/jquery.js"></script> -->
+    <!-- Set page description and assets -->
+    <title>Actividad 6.- Gestión de accesos de usuario</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" href="/assets/images/favicon.svg" sizes="any" type="image/svg+xml" />
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="/assets/css/main.css" />
+    <script src="/assets/js/functions/navLoader.js" type="module"></script>
+    <!-- <script src="/bootstrap/dist/js/bootstrap.js"></script> -->
+    <!-- <script src="/jquery/dist/jquery.js"></script> -->
 </head>
 
 <body class="bg-dark" data-user='<%- JSON.stringify(user) %>'>
-  <!-- Main navbar -->
-  <nav id="nav">
-  </nav>
-  <!-- Carrusel -->
-  <div id="carouselMain" class=" carousel slide" data-bs-ride="carousel" style="background-color: #14235f;">
-    <div class="carousel-indicators">
-      <button type="button" data-bs-target="#carouselMain" data-bs-slide-to="0" class="active" aria-current="true"
-        aria-label="Slide 1"></button>
-      <button type="button" data-bs-target="#carouselMain" data-bs-slide-to="1" aria-label="Slide 2"></button>
-      <button type="button" data-bs-target="#carouselMain" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    <!-- Main navbar -->
+    <nav id="nav">
+    </nav>
+    <!-- Carrusel -->
+    <div id="carouselMain" class=" carousel slide" data-bs-ride="carousel" style="background-color: #14235f;">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselMain" data-bs-slide-to="0" class="active" aria-current="true"
+                aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselMain" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselMain" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="d-flex justify-content-center">
+                    <img src="/assets/images/carousel/estudiantes-1.png" class="item d-block w-75"
+                        alt="carousel-item-1">
+                </div>
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>¡Forma parte de esta nueva etapa!</h5>
+                    <p>Inscribete hoy mismo</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="d-flex justify-content-center">
+                    <img src="/assets/images/carousel/estudiantes-2.png" class="item d-block w-75"
+                        alt="carousel-item-2">
+                </div>
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Revisa nuestras ofertas educativas</h5>
+                    <p>Tenemos diversas carreras y planes de estudio</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="d-flex justify-content-center">
+                    <img src="/assets/images/carousel/estudiantes-3.png" class="item d-block w-75"
+                        alt="carousel-item-3">
+                </div>
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Conviértete en universitario hoy mismo</h5>
+                    <p>Visita nuestro campus</p>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselMain" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Anterior</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselMain" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Siguiente</span>
+        </button>
     </div>
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <div class="d-flex justify-content-center">
-          <img src="/assets/images/carousel/estudiantes-1.png" class="item d-block w-75" alt="carousel-item-1">
-        </div>
-        <div class="carousel-caption d-none d-md-block">
-          <h5>¡Forma parte de esta nueva etapa!</h5>
-          <p>Inscribete hoy mismo</p>
-        </div>
-      </div>
-      <div class="carousel-item">
-        <div class="d-flex justify-content-center">
-          <img src="/assets/images/carousel/estudiantes-2.png" class="item d-block w-75" alt="carousel-item-2">
-        </div>
-        <div class="carousel-caption d-none d-md-block">
-          <h5>Revisa nuestras ofertas educativas</h5>
-          <p>Tenemos diversas carreras y planes de estudio</p>
-        </div>
-      </div>
-      <div class="carousel-item">
-        <div class="d-flex justify-content-center">
-          <img src="/assets/images/carousel/estudiantes-3.png" class="item d-block w-75" alt="carousel-item-3">
-        </div>
-        <div class="carousel-caption d-none d-md-block">
-          <h5>Conviértete en universitario hoy mismo</h5>
-          <p>Visita nuestro campus</p>
-        </div>
-      </div>
+    <!-- Main content -->
+    <div class="container">
     </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselMain" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Anterior</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselMain" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Siguiente</span>
-    </button>
-  </div>
-  <!-- Main content -->
-  <div class="container">
-  </div>
 </body>
 
 </html>
