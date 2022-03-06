@@ -1,0 +1,52 @@
+<html lang="en">
+
+<head>
+    <!-- Set page description and assets -->
+    <title>Actividad 6.- Gestión de accesos de usuario</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" href="/assets/images/favicon.svg" sizes="any" type="image/svg+xml" />
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="/assets/css/main.css" />
+    <script src="/assets/js/functions/navLoader.js" type="module"></script>
+    <!-- <script src="/bootstrap/dist/js/bootstrap.js"></script> -->
+    <!-- <script src="/jquery/dist/jquery.js"></script> -->
+</head>
+
+<body class="bg-dark" data-user='<%- JSON.stringify(user) %>'>
+    <!-- Main navbar -->
+    <nav id="nav">
+    </nav>
+    <!-- Main content -->
+    <div class="container">
+        <div class="d-flex align-items-center justify-content-center pt-5">
+            <!-- User card -->
+            <div class="card" style="width: 25rem;">
+                <img src="/assets/images/person.png" class="card-img align-self-center" style="width: 12rem;" alt="user-image">
+                <div class="card-body">
+                    <h5 class="card-title">Bienvenido <%= user.sn %>
+                    </h5>
+                    <p class="card-text">Este es el sistema de consulta de datos de usuarios, a continuación puedes
+                        ver tus datos</p>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li id="uCorreo" class="list-group-item">Correo: <%= user.uCorreo %>
+                    </li>
+                    <li id="uNombre" class="list-group-item">Nombre: <%= user.uNombre %>
+                    </li>
+                    <li id="uDependencia" class="list-group-item">Dependencia: <%= user.uDependencia %>
+                    </li>
+                    <li id="uCuenta" class="list-group-item">No. cuenta: <%= user.uCuenta %>
+                    </li>
+                    <li id="uTipo" class="list-group-item">Tipo de usuario: <%= user.uTipo %>
+                    </li>
+                    <li id="ImmutableID" class="list-group-item">ID único: <%= user.ImmutableID %>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,6 +1,7 @@
 # Actividad 6.- Gestión de accesos de usuario
 
 EQUIPOS
+
 Un control de acceso a sistemas informáticos está basado en tres conceptos fundamentales: identificación, autenticación y autorización.
 
 Existen dos tipos de control de acceso de seguridad informática, que son (a)el control de acceso autónomo y (b)el control de acceso en red.
@@ -19,12 +20,31 @@ Desarrollar en cualquier lenguaje o entorno apropiado un control de acceso en re
 - Firebase
 - Federación
 
-
 EQUIPO 1 (Captchas)
-
 
 EQUIPO 2 (Tradicional)
 
 EQUIPO 3 (Firebase)
 
 EQUIPO 4 (Federación)
+
+## Requisitos
+- Node.js (>= 16.14.0 LTS)
+- Conexión a internet
+- Cuenta de la Universidad de Colima
+- Puerto local 4006 libre
+
+## Instalación
+```
+npm install
+```
+
+## Iniciar el servidor
+```
+npm start
+npm run dev | (Requiere nodemon)
+```
+
+## Previsualización
+<p align="center"><img src="./content/pages/page-welcome.png" width="700" style="align-center"></p>
+<p align="center"><img src="./content/pages/page-information.png" width="700" style="align-center"></p>
