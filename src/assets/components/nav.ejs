@@ -1,0 +1,54 @@
+<!-- Main navbar -->
+<nav id="nav" class="navbar sticky-top navbar-expand-lg navbar-dark" style="background-color: #669933;">
+    <div class="container-fluid justify-content-center">
+        <div>
+            <button class="navbar-toggler me-2" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+        <a class="nav-link" aria-current="page" href="https://www.ucol.mx">
+            <img src="/assets/images/favicon.svg" width="auto" height="40">
+        </a>
+        <div>
+            <a class="navbar-brand" href="/">Actividad 6.- Gestión de accesos de usuario</a>
+        </div>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="/">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="/information">Información</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        Acerca de
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item"
+                                href="https://github.com/Telematica-ucol-2019/E4-6-DSS-gestion-de-accesos-de-usuario">Código
+                                fuente</a></li>
+                        <li><a class="dropdown-item" href="https://github.com/Telematica-ucol-2019">GitHub</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item"
+                                href="https://github.com/Telematica-ucol-2019/E4-6-DSS-gestion-de-accesos-de-usuario/network/dependencies">Dependencias
+                                del sitio</a></li>
+                        <li><a class="dropdown-item" href="https://portal.ucol.mx/federacion/identidades/e">Federeción
+                                de identidadess de la Universidad de Colima</a></li>
+                        <li><a class="dropdown-item"
+                                href="https://github.com/Universidad-de-Colima/login-federado-node">Plantilla
+                                utilizada</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <button id="btnNavLogIn" class="btn btn-md btn-light btn-outline-success me-2" hidden>Iniciar
+                sesión</button>
+            <button id="btnNavLogOut" class="btn btn-md btn-light btn-outline-danger" hidden>Cerrar sesión</button>
+        </div>
+    </div>
+</nav>

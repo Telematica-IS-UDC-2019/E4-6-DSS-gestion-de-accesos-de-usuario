@@ -3,6 +3,7 @@ import express from "express";
 import session from 'express-session';
 import passport from 'passport';
 import cors from 'cors';
+import morgan from "morgan";
 import router from './routes/app.routes.js';
 import tools from './functions/tools.js';
 // Add the paths of the current file
@@ -31,6 +32,7 @@ app.use(passport.session());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cors());
+if (process.env.NODE_ENV?.toLocaleLowerCase() !=  'production') app.use(morgan("dev"));
 // Set the view and routes
 app.use('/assets', express.static(__dirname + '/assets'));
 app.use('/node_modules', express.static(__dirname + '/../node_modules'));
@@ -38,7 +40,7 @@ app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
 app.use(router);
 // Start the server
-const server = app.listen(port, (req) => {
-  let host = process.env.NODE_ENV != 'production' ? `http://localhost:${server.address().port}` : server.address().port
+const server = app.listen(port, () => {
+  let host = process.env.NODE_ENV != 'production' ? `http://localhost:${server.address().port}` : server.address().port;
   console.log('Server is running on:', host);
 });

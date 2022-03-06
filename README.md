@@ -27,3 +27,24 @@ EQUIPO 2 (Tradicional)
 EQUIPO 3 (Firebase)
 
 EQUIPO 4 (Federación)
+
+## Requisitos
+- Node.js (>= 16.14.0 LTS)
+- Conexión a internet
+- Cuenta de la Universidad de Colima
+- Puerto local 4006 libre
+
+## Instalación
+```
+npm install
+```
+
+## Iniciar el servidor
+```
+npm start
+npm run dev | (Requiere nodemon)
+```
+
+## Previsualización
+<p align="center"><img src="./content/pages/page-welcome.png" width="700" style="align-center"></p>
+<p align="center"><img src="./content/pages/page-information.png" width="700" style="align-center"></p>
